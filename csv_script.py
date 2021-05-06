@@ -35,6 +35,8 @@ def separate_title(s):
     else:
         splitted.pop(0)
         splitted.pop(0)
+        if len(splitted) == 0:
+            return 'None'
         return ' '.join(splitted)
 
 with open(path, 'r') as csv_file:
@@ -42,12 +44,12 @@ with open(path, 'r') as csv_file:
     line_count = 0
     for row in csv_reader:
         books = row[1]
-        book = row[5]
+        book = row[8]
         # print(books)
         # print(remove_country_name(books))
         # print(separate_books(books))
-        print(separate_author(book))
-        # print(separate_title(book))
+        # print(separate_author(book))
+        print(separate_title(book))
         line_count += 1
 
     print(line_count)
