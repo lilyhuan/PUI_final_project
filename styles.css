@@ -1,0 +1,34 @@
+p {
+  font-size: 0.85em;
+}
+svg {
+  background: #efefef;
+}
+.country {
+  fill: #cccccc;
+  stroke: black;
+  stroke-width: 0.5;
+}
+.selected {
+  fill: yellow;
+}
+
+.red {
+  background-color: red;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.green {
+  background-color: green;
+}
+
+#map {
+}
+
+#main {
+  text-align: center;
+  font-family: "Rock Salt", cursive;
+}
