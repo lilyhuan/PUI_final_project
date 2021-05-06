@@ -27,16 +27,27 @@ def separate_author(s):
         author = [splitted[0], splitted[1]]
         return ' '.join(author)
 
+def separate_title(s):
+    #first space
+    splitted = s.split(' ')
+    if len(splitted) < 2:
+        return 'None'
+    else:
+        splitted.pop(0)
+        splitted.pop(0)
+        return ' '.join(splitted)
+
 with open(path, 'r') as csv_file:
     csv_reader = csv.reader(csv_file, delimiter=',')
     line_count = 0
     for row in csv_reader:
         books = row[1]
-        book = row[2]
+        book = row[5]
         # print(books)
         # print(remove_country_name(books))
         # print(separate_books(books))
         print(separate_author(book))
+        # print(separate_title(book))
         line_count += 1
 
     print(line_count)
