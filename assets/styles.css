@@ -16,6 +16,10 @@ svg {
   fill: #ff7d8d;
 }
 
+.hovered {
+  fill: #ff7d8d;
+}
+
 #page-title {
   background-color: white;
   margin-top: 1vh;
