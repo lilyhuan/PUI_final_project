@@ -5,6 +5,11 @@
     height = 400 - margin.top - margin.bottom,
     width = 800 - margin.left - margin.right;
     width = document.getElementById('map-container').offsetWidth
+    var mtop = 75
+    if (window.outerWidth < 480) {
+      document.getElementById('top-map-margin').className = "row mt-2"
+      mtop = 20
+    }
     // height = document.getElementById('map-container').offsetHeight
     console.log(width, height)
     var svg = d3.select("#map-container")
@@ -16,7 +21,7 @@
     // .attr("class", "img-fluid")
     .attr("id", "map")
     .append("g")
-    .attr("transform", "translate(" + 0 + "," + 75 + ")");
+    .attr("transform", "translate(" + 0 + "," + mtop + ")");
     // .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")")
     
     d3.queue()
@@ -67,10 +72,12 @@
 
 
 function changeBook(cname) {
-    let card = document.getElementById("book")
-    card.innerHTML = cname
+    // let card = document.getElementById("book")
+    // card.innerHTML = cname
+    document.getElementById("country-name").innerText = cname
 
     d3.csv("https://lilyhuan.github.io/PUI_final_project/books.csv", function (data) {
+      // d3.csv("/books.csv", function (data) {
         for (var i = 0; i < data.length; i++) {
         //   document.getElementById("book").innerHTML = data[i].Country;
         //   console.log(data[i].Country);
