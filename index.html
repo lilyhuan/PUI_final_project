@@ -17,42 +17,23 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
-    <!-- <style>
-      body {
-        margin: 0;
-      }
-
-      svg {
-        background: #eee;
-      }
-
-      .sphere {
-        fill: #fff;
-      }
-
-      .land {
-        fill: #000;
-      }
-
-      .boundary {
-        fill: none;
-        stroke: #fff;
-        stroke-linejoin: round;
-        stroke-linecap: round;
-        vector-effect: non-scaling-stroke;
-      }
-    </style> -->
   </head>
   <body>
-    <div class="container">
+    <div class="container-fluid">
       <div class="row">
-        <div class="col-xs-12 red">
-          <h1 id="main">Book the World</h1>
+        <div class="container" id="page-title">
+          <h1 class="main">Book the World</h1>
+          <p class="main">Select a country to begin</p>
+          <hr />
         </div>
       </div>
-      <div class="row">
+    </div>
+    <div class="container">
+      <div class="row mt-5">
         <div class="col-md-8 blue" id="map-container"></div>
-        <div class="col-md-4 green" id="book"></div>
+        <div class="col-md-4 green" id="book">
+          <p>Select a country to begin</p>
+        </div>
       </div>
     </div>
 

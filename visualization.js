@@ -119,13 +119,14 @@ function APICall(title, author) {
             card.innerHTML += `
             <div class="card mb-3" style="max-width: 540px;">
               <div class="row g-0">
-                <div class="col-md-4">
-                  <img src="${obj.items[0].volumeInfo.imageLinks.thumbnail}" alt="...">
+                <div class="col-4">
+                  <img src="${obj.items[0].volumeInfo.imageLinks.thumbnail}" alt="${title} book cover">
                 </div>
-                <div class="col-md-8">
+                <div class="col-8">
                   <div class="card-body">
                     <h5 class="card-title">${title}</h5>
                     <p class="card-text">${author}</p>
+                    <a href="${obj.items[0].volumeInfo.infoLink}" class="btn btn-primary" target="_blank">More Info</a>
                   </div>
                 </div>
               </div>
@@ -140,21 +141,3 @@ function APICall(title, author) {
         }
     }
 }
-
-
-var card = `
-<div class="card mb-3" style="max-width: 540px;">
-  <div class="row g-0">
-    <div class="col-md-4">
-      <img src="..." alt="...">
-    </div>
-    <div class="col-md-8">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-      </div>
-    </div>
-  </div>
-</div>
-`

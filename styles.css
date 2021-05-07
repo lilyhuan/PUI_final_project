@@ -1,3 +1,6 @@
+body {
+  margin: 0px;
+}
 p {
   font-size: 0.85em;
 }
@@ -13,22 +16,25 @@ svg {
   fill: #ff7d8d;
 }
 
-.red {
-  background-color: red;
+#page-title {
+  background-color: white;
+  margin-top: 1vh;
 }
 
-.blue {
-  background-color: blue;
-}
-
-.green {
-  background-color: green;
+hr {
+  background-color: #ff7d8d;
+  border-top: 30px solid #ff7d8d;
+  opacity: 100%;
 }
 
 #map-container {
 }
 
-#main {
+.main {
   text-align: center;
   font-family: "Rock Salt", cursive;
+}
+
+#book {
+  border-left: 20px;
 }
