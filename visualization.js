@@ -70,7 +70,7 @@ function changeBook(cname) {
     let card = document.getElementById("book")
     card.innerHTML = cname
 
-    d3.csv("./books.csv", function (data) {
+    d3.csv("https://lilyhuan.github.io/PUI_final_project/books.csv", function (data) {
         for (var i = 0; i < data.length; i++) {
         //   document.getElementById("book").innerHTML = data[i].Country;
         //   console.log(data[i].Country);
