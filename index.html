@@ -17,6 +17,31 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
+    <!-- <style>
+      body {
+        margin: 0;
+      }
+
+      svg {
+        background: #eee;
+      }
+
+      .sphere {
+        fill: #fff;
+      }
+
+      .land {
+        fill: #000;
+      }
+
+      .boundary {
+        fill: none;
+        stroke: #fff;
+        stroke-linejoin: round;
+        stroke-linecap: round;
+        vector-effect: non-scaling-stroke;
+      }
+    </style> -->
   </head>
   <body>
     <div class="container">
@@ -26,7 +51,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-md-8 blue" id="map"></div>
+        <div class="col-md-8 blue" id="map-container"></div>
         <div class="col-md-4 green" id="book"></div>
       </div>
     </div>
@@ -43,6 +68,6 @@
     <script src="https://d3js.org/topojson.v1.min.js"></script>
     <script src="visualization.js"></script>
 
-    <script src="main.js"></script>
+    <!-- <script src="main.js"></script> -->
   </body>
 </html>

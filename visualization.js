@@ -4,17 +4,21 @@
     var margin = { top: 50, left: 50, right: 50, bottom: 50 },
     height = 400 - margin.top - margin.bottom,
     width = 800 - margin.left - margin.right;
-
-    var svg = d3.select("#map")
+    width = document.getElementById('map-container').offsetWidth
+    // height = document.getElementById('map-container').offsetHeight
+    console.log(width, height)
+    var svg = d3.select("#map-container")
     .append("svg")
     // .attr("height", height + margin.top + margin.bottom)
     // .attr("width", width + margin.left + margin.right)
-    .attr("height", height + margin.top + margin.bottom)
-    .attr("width", width + margin.left + margin.right)
+    .attr("height", 400)
+    .attr("width", "100%")
+    // .attr("class", "img-fluid")
     .attr("id", "map")
     .append("g")
-    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-
+    .attr("transform", "translate(" + 0 + "," + 75 + ")");
+    // .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")")
+    
     d3.queue()
     .defer(d3.json, "world.topojson")
     .await(ready)
@@ -26,7 +30,11 @@
     // Mercator projection
     var projection = d3.geoMercator()
     .translate([ width/2, height/2 ]) //center it
-    .scale(90) //zoom in out
+    // .scale(90) //zoom in out
+    .scale(width / 2.5 / Math.PI)
+    //             .rotate([0, 0])
+    //             .center([0, 0])
+                // .translate([width / 2, height / 2])
 
     // create path using projection
     var path = d3.geoPath()
