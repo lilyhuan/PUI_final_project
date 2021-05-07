@@ -1,6 +1,10 @@
+# This file is jumbled code I used to clean up a csv file
+# It's specific to the original csv file I created, so pardon the code
+# Original CSV generated using this website's data: https://ayearofreadingtheworld.com/thelist/
 import csv
 
-path = r'C:\College Stuff\Junior Year\Semester 2\05430 Programmable User Interfaces\test\final_project\books.csv'
+# Path to csv here, mine was removed for privacy
+path = r'your_path'
 
 def remove_country_name(s):
     for i in range(0, len(s)):
@@ -10,16 +14,13 @@ def remove_country_name(s):
 
 def separate_books(s):
     splitted = s.split('/')
-    # print(splitted)
     if len(splitted) < 3:
         return 'None'
     else:
         return splitted[2][1:-1]
-    # print(splitted[1][:-1])
     # print(repr(s))
 
 def separate_author(s):
-    #first space
     splitted = s.split(' ')
     if len(splitted) < 2:
         return s
@@ -28,7 +29,6 @@ def separate_author(s):
         return ' '.join(author)
 
 def separate_title(s):
-    #first space
     splitted = s.split(' ')
     if len(splitted) < 2:
         return 'None'
