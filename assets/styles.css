@@ -1,17 +1,34 @@
+/* CSS is organized by top of HTML to bottom, and left to right. The declerations are organized in alphabetical order.*/
+
 body {
-  margin: 0px;
+  margin: 0;
 }
-p {
-  font-size: 0.85em;
+
+/* Website header */
+.page-header {
+  font-family: "Rock Salt", cursive;
+  margin-top: 1vh;
+  text-align: center;
 }
+
+/* Horizontal bar below website header */
+hr {
+  background-color: #ff7d8d;
+  border-top: 30px solid #ff7d8d;
+  opacity: 100%;
+}
+
+/* Map styling */
 svg {
   background: white;
 }
+
 .country {
   fill: white;
   stroke: black;
   stroke-width: 0.5;
 }
+
 .selected {
   fill: #ff7d8d;
 }
@@ -20,22 +37,7 @@ svg {
   fill: #ff7d8d;
 }
 
-#page-title {
-  background-color: white;
-  margin-top: 1vh;
-}
-
-hr {
-  background-color: #ff7d8d;
-  border-top: 30px solid #ff7d8d;
-  opacity: 100%;
-}
-
-.main {
-  text-align: center;
-  font-family: "Rock Salt", cursive;
-}
-
+/* Book column styling */
 #book {
   border-left: 20px;
 }
